@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Assignment 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+
+
+        
+        </head>
+
+<body>
+        <h2>Please Input User Information</h2>
+
+          First name:<br>
+            <input type="text" id="firstName" name="First Name" value= "">
+          <br>
+          Last name:<br>
+            <input type="text" id="lastName" name="Last Name" value= "">
+          <br>
+          Address:<br>
+            <input type="text" id="address" name="Address" value= "">
+          <br>
+          Phone Number:<br>
+            <input type="text" id="phoneNumber" name="Phone Number" value= "">
+          <br>
+          Credit Card:<br>
+            <input type="text" id="creditCard" name="Credit Card" value= "">
+          <br>
+
+          <p class= "thirdPage"><strong>How many beds need made? </strong></p>
+<select id="bedsMade">
+    <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+
+      <p class = "thirdPage"><strong>How many bedsets need laundering? </strong></p>
+<select id= "bedsWashed">
+    <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+            <br><br>
+
+            <input type="button" value="submit" onclick="orderSummation()">
+
+            
+           <script language="javascript" type="text/javascript">
+
+            
+            
+            function orderSummation() {
+                var cusFirstName = document.getElementById("firstName").value;
+                var cusLastName = document.getElementById("lastName").value;
+                var cusAddress = document.getElementById("address").value;
+                var cusPhoneNumber = document.getElementById("phoneNumber").value;
+                var cusCreditCard = document.getElementById("creditCard").value;
+                var cusBedsMade = document.getElementById("bedsMade").value;
+                var cusBedsWashed = document.getElementById("bedsWashed").value;
+                
+ //document.open("confirmation.html");
+
+                document.write("<h1> Order Success </h1>")
+                document.write("<br>");
+                document.write("<h2> You Entered: </h2>")
+
+                document.write("First Name: " + cusFirstName);
+                document.write("<br>");
+                document.write("Last Name: " + cusLastName);
+                document.write("<br>");
+                document.write("Address: " + cusAddress);
+                document.write("<br>");
+                document.write("Phone Number: " + cusPhoneNumber);
+                document.write("<br>");
+                document.write("Credit Card: " + cusCreditCard);
+                document.write("<br>");
+                document.write("Requested Beds to be Made: " + cusBedsMade);
+                document.write("<br>");
+                document.write("Requested Beds to be Washed: " + cusBedsWashed);
+                document.write("<br>");
+            }
+            </script>
+
+        
+        
+
+        
+</body>
+
+</html>
